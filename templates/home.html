@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Details</title>
+<style>
+  .body{
+    width: 100%;
+    height: 100%;
+  }
+  .form{
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: flex; justify-content: center; align-items: center">
+      <span class="navbar-brand mb-0 h1">HOUSE PRICE PREDICTOR</span>
+    </nav>
+  </header>
+  <div class="form">
+    <form action="" method="post">
+      {{form.csrf_token}}
+      <fieldset>
+        <div class="row" style="display: flex;justify-content: space-between;align-items: center">
+          <div class="form-group col">
+            <label for="CRIM">CRIM</label>
+            {{form.crim(class="form-control")}}
+            {%for error in form.crim.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+          <div class="form-group col">
+            <label for="ZN">ZN</label>
+            {{form.zn(class="form-control")}}
+            {%for error in form.zn.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+        </div>
+
+        <div class="row" style="display: flex;justify-content: space-between;align-items: center">
+          <div class="form-group col">
+            <label for="INDUS">INDUS</label>
+            {{form.indus(class="form-control")}}
+            {%for error in form.indus.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+          <div class="form-group col">
+            <label for="CHAS">CHAS</label>
+            {{form.chas(class="form-control")}}
+            {%for error in form.chas.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+        </div>
+
+        <div class="row" style="display: flex;justify-content: space-between;align-items: center">
+          <div class="form-group col">
+            <label for="NOX">NOX</label>
+            {{form.nox(class="form-control")}}
+            {%for error in form.nox.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+          <div class="form-group col">
+            <label for="RM">RM</label>
+            {{form.rm(class="form-control")}}
+            {%for error in form.rm.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+        </div>
+
+        <div class="row" style="display: flex;justify-content: space-between;align-items: center">
+          <div class="form-group col">
+            <label for="AGE">AGE</label>
+            {{form.age(class="form-control")}}
+            {%for error in form.age.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+          <div class="form-group col">
+            <label for="DIS">DIS</label>
+            {{form.dis(class="form-control")}}
+            {%for error in form.dis.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+        </div>
+
+        <div class="row" style="display: flex;justify-content: space-between;align-items: center">
+          <div class="form-group col">
+            <label for="RAD">RAD</label>
+            {{form.rad(class="form-control")}}
+            {%for error in form.rad.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+          <div class="form-group col">
+            <label for="TAX">TAX</label>
+            {{form.tax(class="form-control")}}
+            {%for error in form.tax.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+        </div>
+
+        <div class="row" style="display: flex;justify-content: space-between;align-items: center">
+          <div class="form-group col">
+            <label for="PTRATIO">PTRATIO</label>
+            {{form.ptratio(class="form-control")}}
+            {%for error in form.ptratio.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+          <div class="form-group col">
+            <label for="B">Black People ratio by town</label>
+            {{form.b(class="form-control")}}
+            {%for error in form.b.errors%} 
+              {{error}}
+            {%endfor%}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="LSTAT">LSTAT</label>
+          {{form.lstat(class="form-control")}}
+          {%for error in form.lstat.errors%} 
+              {{error}}
+            {%endfor%}
+        </div>
+        <p><a href="{{url_for('information')}}">VISIT</a> the given link for more information about data.</p>
+        {{form.submit(class="btn btn-primary mb-2",style="margin-left: 40%;")}}
+      </fieldset>
+    </form>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
