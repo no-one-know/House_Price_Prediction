@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms.fields import DecimalField,SubmitField
+from wtforms.fields import DecimalField,SubmitField,SelectField
 from wtforms.validators import DataRequired
 
 
@@ -7,7 +7,7 @@ class details(FlaskForm):
     crim=DecimalField('CRIM',validators=[DataRequired()])
     zn=DecimalField('ZN',validators=[DataRequired()])
     indus=DecimalField('INDUS',validators=[DataRequired()])
-    chas=DecimalField('CHAS',validators=[DataRequired()])
+    chas=SelectField('CHAS',validators=[DataRequired()],choices=[0,1])
     nox=DecimalField('NOX',validators=[DataRequired()])
     rm=DecimalField('RM',validators=[DataRequired()])
     age=DecimalField('AGE',validators=[DataRequired()])
