@@ -18,6 +18,11 @@
     <li>% lower status of the population</li>
 </ul>
 <p><b>AdaboostRegressor</b> model gave the accuracy of 89% and was used in the web application.</p>
-![User_Input](https://drive.google.com/file/d/1EKCoBl_NfC9qXXb0duF67_MJB-v44ESH/view?usp=share_link)
-<br>
-![Output](https://drive.google.com/file/d/19CAPkEdXKiaWj8iva7JcPqpgT8cTyflr/view?usp=share_link)
+
+<b>USER INPUT</b>
+
+![Screenshot (6)](https://user-images.githubusercontent.com/85546544/232225995-b6060f3f-365e-4e36-882e-784575bc0ea2.png)
+
+<b>OUTPUT</b>
+
+![Screenshot (7)](https://user-images.githubusercontent.com/85546544/232226042-bc40c2a0-7b5a-42da-8c74-7b2dc6dee544.png)
